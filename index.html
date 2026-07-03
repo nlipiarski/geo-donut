@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Location Generator</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="favicon.png" />
+  </head>
+  <body>
+    <main>
+      <h1>Random Location Generator</h1>
+      <p>Starting at the given point, this site will generate a random point between the given radii and give you a link to that point on Google Earth.</p>
+      <p>
+        <label for="latitude">Latitude</label>
+        <input type="text" name="latitude" value="47.6205377463714" /> 
+      </p>
+      <p>
+        <label for="longitude">Longitude</label>
+        <input type="text" name="longitude" value="-122.3492105874244" />
+      </p>
+      <p>
+        <label for="innerRadius">Inner radius (mi):</label>
+        <input type="text" name="innerRadius" value="10" />
+      </p>
+      <p>
+        <label for="outerRadius">Outer radius (mi):</label>
+        <input type="text" name="outerRadius" value="20" />
+      </p>
+      <button name="submit">Generate Point</button>
+      <div id="results" class="hidden">
+        <p>Your random point is <b id="latDisplay"></b>, <b id="longDisplay"></b> with a distance of <b id="radiusDisplay"></b> miles from the starting point</p>
+        <a id="googleEarthLink" target="_blank">Open in Google Earth ⬈</a>
+      </div>
+    </main>
+  </body>
+</html>
